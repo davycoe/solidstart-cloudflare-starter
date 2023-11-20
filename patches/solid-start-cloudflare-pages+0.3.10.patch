@@ -1,0 +1,21 @@
+diff --git a/node_modules/solid-start-cloudflare-pages/index.js b/node_modules/solid-start-cloudflare-pages/index.js
+index f3c7a92..37869b6 100644
+--- a/node_modules/solid-start-cloudflare-pages/index.js
++++ b/node_modules/solid-start-cloudflare-pages/index.js
+@@ -55,7 +55,7 @@ export default function (miniflareOptions) {
+               Request,
+               Response,
+               fetch,
+-              crypto,
++
+               Headers,
+               ReadableStream,
+               WritableStream,
+@@ -66,7 +66,6 @@ export default function (miniflareOptions) {
+               Request,
+               Response,
+               fetch,
+-              crypto,
+               Headers,
+               ReadableStream,
+               WritableStream,

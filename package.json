@@ -1,0 +1,28 @@
+{
+  "name": "solid-beta",
+  "scripts": {
+    "dev": "solid-start dev",
+    "build": "solid-start build",
+    "start": "wrangler pages dev ./dist/public",
+    "postinstall": "patch-package"
+  },
+  "type": "module",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "patch-package": "^8.0.0",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "vite": "4.5.0",
+    "wrangler": "^3.16.0"
+  },
+  "dependencies": {
+    "@solidjs/meta": "^0.29.1",
+    "@solidjs/router": "^0.9.1",
+    "solid-js": "^1.8.5",
+    "solid-start": "^0.3.10",
+    "solid-start-cloudflare-pages": "^0.3.10"
+  },
+  "engines": {
+    "node": "21"
+  }
+}
