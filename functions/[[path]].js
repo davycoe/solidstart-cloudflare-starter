@@ -3,16 +3,16 @@ var manifest = {
 	type: "route",
 	script: {
 		type: "script",
-		href: "/assets/_...404_-03ef389a.js"
+		href: "/assets/_...404_-041a6d80.js"
 	},
 	assets: [
 		{
 			type: "script",
-			href: "/assets/_...404_-03ef389a.js"
+			href: "/assets/_...404_-041a6d80.js"
 		},
 		{
 			type: "script",
-			href: "/assets/entry-client-b513c3be.js"
+			href: "/assets/entry-client-06c2bd74.js"
 		},
 		{
 			type: "style",
@@ -24,16 +24,16 @@ var manifest = {
 	type: "route",
 	script: {
 		type: "script",
-		href: "/assets/about-013203ca.js"
+		href: "/assets/about-c0a223e9.js"
 	},
 	assets: [
 		{
 			type: "script",
-			href: "/assets/about-013203ca.js"
+			href: "/assets/about-c0a223e9.js"
 		},
 		{
 			type: "script",
-			href: "/assets/entry-client-b513c3be.js"
+			href: "/assets/entry-client-06c2bd74.js"
 		},
 		{
 			type: "style",
@@ -41,7 +41,7 @@ var manifest = {
 		},
 		{
 			type: "script",
-			href: "/assets/Counter-d0d2ac25.js"
+			href: "/assets/Counter-e0898ea6.js"
 		}
 	]
 },
@@ -49,16 +49,16 @@ var manifest = {
 	type: "route",
 	script: {
 		type: "script",
-		href: "/assets/index-ca786a5e.js"
+		href: "/assets/index-aae1d5d7.js"
 	},
 	assets: [
 		{
 			type: "script",
-			href: "/assets/index-ca786a5e.js"
+			href: "/assets/index-aae1d5d7.js"
 		},
 		{
 			type: "script",
-			href: "/assets/entry-client-b513c3be.js"
+			href: "/assets/entry-client-06c2bd74.js"
 		},
 		{
 			type: "style",
@@ -66,7 +66,7 @@ var manifest = {
 		},
 		{
 			type: "script",
-			href: "/assets/Counter-d0d2ac25.js"
+			href: "/assets/Counter-e0898ea6.js"
 		}
 	]
 },
@@ -74,12 +74,12 @@ var manifest = {
 	type: "entry",
 	script: {
 		type: "script",
-		href: "/assets/entry-client-b513c3be.js"
+		href: "/assets/entry-client-06c2bd74.js"
 	},
 	assets: [
 		{
 			type: "script",
-			href: "/assets/entry-client-b513c3be.js"
+			href: "/assets/entry-client-06c2bd74.js"
 		},
 		{
 			type: "style",
@@ -1459,8 +1459,6 @@ function createRouterContext(integration, base = "", data, out) {
                     if (output) {
                         output.url = resolvedTo;
                     }
-                    const e = getRequestEvent();
-                    e && (e.response = Response.redirect(resolvedTo, 302));
                     setSource({ value: resolvedTo, replace, scroll, state: nextState });
                 }
             }
@@ -1526,7 +1524,6 @@ function createRouteContext(router, parent, child, match, params) {
 }
 
 const Router = props => {
-  let e;
   const {
     source,
     url,
@@ -1535,7 +1532,7 @@ const Router = props => {
     out
   } = props;
   const integration = source || (staticIntegration({
-    value: url || (e = getRequestEvent()) && e.request.url || ""
+    value: url || ""
   }) );
   const routerState = createRouterContext(integration, base, data, out);
   return createComponent(RouterContextObj.Provider, {

@@ -14,9 +14,10 @@ import {
   Title,
 } from "solid-start";
 import "./root.css";
+
 export default function Root() {
   const location = useLocation();
-  const active = (path) =>
+  const active = (path: string) =>
     path == location.pathname
       ? "border-sky-600"
       : "border-transparent hover:border-sky-600";

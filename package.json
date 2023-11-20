@@ -23,6 +23,6 @@
     "solid-start-cloudflare-pages": "^0.3.10"
   },
   "engines": {
-    "node": "21"
+    "node": "18"
   }
 }
